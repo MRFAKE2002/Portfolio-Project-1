@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 
 //! Image
-import profilepic from "../../public/assets/profilepic.png";
+import profilepic from "../../public/assets/hero/profilepic.png";
 
 function Hero() {
   return (
