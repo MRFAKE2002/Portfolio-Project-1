@@ -1,22 +1,69 @@
+"use client";
+
+//! React
+import { useEffect, useState } from "react";
+
+//! Framer Motion
+import { motion, Variants } from "framer-motion";
+
 //! Shadcn
 import { Progress } from "@/components/ui/progress";
 
 //! Picture
-import project1 from "../../public/assets/about/proj5.png";
-import project2 from "../../public/assets/about/proj6.png";
+import project1 from "../../public/assets/About/proj5.png";
+import project2 from "../../public/assets/About/proj6.png";
 
 //! Next Image
 import Image from "next/image";
 
+const container = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const cardVariant: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 function About() {
+  //! States
+  const [frontEnd, setFrontEnd] = useState(0);
+  const [backEnd, setBackEnd] = useState(0);
+  const [devOps, setDevOps] = useState(0);
+
+  //! UseEffect
+  useEffect(() => {
+    const id1 = setTimeout(() => setFrontEnd(80), 300);
+    const id2 = setTimeout(() => setBackEnd(65), 500);
+    const id3 = setTimeout(() => setDevOps(50), 700);
+
+    return () => {
+      clearTimeout(id1);
+      clearTimeout(id2);
+      clearTimeout(id3);
+    };
+  }, []);
+
   return (
     <section id="about" className="text-white p-8">
       <h2 className="text-6xl font-bold mb-8">
         About <span className="text-gray-300">Me</span>
       </h2>
-      <div className="grid md:grid-cols-3 gap-8">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.15 }}
+        className="grid md:grid-cols-3 gap-8"
+      >
         {/* Background */}
-        <div className="border border-white/20 rounded-lg p-6">
+        <motion.div
+          variants={cardVariant}
+          className="border border-white/20 rounded-lg p-6"
+        >
           <h3 className="text-2xl font-bold mb-2">01. Background</h3>
           <p className="text-white/50 mb-8">
             I'm a passionate full-stack developer with a strong foundation in
@@ -40,27 +87,33 @@ function About() {
               ];
             </code>
           </div>
-        </div>
+        </motion.div>
         {/* Expertise */}
-        <div className="border border-white/20 rounded-lg p-6">
+        <motion.div
+          variants={cardVariant}
+          className="border border-white/20 rounded-lg p-6"
+        >
           <h3 className="text-2xl font-bold mb-2">02. Expertise</h3>
           <p className="text-white/50">
             I specialize in building robust and scalable web applications using
             modern technologies. My expertise spans both front-end and back-end
             development, allowing me to create seamless, end-to-end solutions.
           </p>
-          <div className="mt-4 relative border border-white/20 rounded-lg p-4 h-[220px] overflow-hidden">
+          <div className="mt-4 relative border border-white/20 rounded-lg p-4 h-[320px] overflow-hidden">
             <Image
               src={project1}
               alt="project 1"
-              layout="fill"
+              fill
               objectFit="cover"
               className="rounded-lg"
             />
           </div>
-        </div>
+        </motion.div>
         {/* Skills */}
-        <div className="border border-white/20 rounded-lg p-6">
+        <motion.div
+          variants={cardVariant}
+          className="border border-white/20 rounded-lg p-6"
+        >
           <h3 className="text-2xl font-bold mb-2">03. Skills</h3>
           <p className="text-white/50 mb-4">
             I'm proficient in a wide range of technologies and constantly
@@ -89,8 +142,9 @@ function About() {
               </ul>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
+
       <div className="grid md:grid-cols-2 gap-8 mt-8">
         <div className="border border-white/20 rounded-lg p-6">
           <h3 className="text-2xl font-bold mt-4 mb-2">0.4 Approach</h3>
@@ -107,7 +161,7 @@ function About() {
                 Front-End
               </label>
               <Progress
-                value={80}
+                value={frontEnd}
                 className="bg-gray-300/20 [&>div]:bg-purple-100/80"
               />
             </div>
@@ -115,15 +169,15 @@ function About() {
             <div>
               <label className="block text-sm font-medium mb-1">Back-End</label>
               <Progress
-                value={65}
-                className="bg-black [&>div]:bg-purple-100/80"
+                value={backEnd}
+                className="bg-gray-300/20 [&>div]:bg-purple-100/80"
               />
             </div>
             {/* DevOps */}
             <div>
               <label className="block text-sm font-medium mb-1">DevOps</label>
               <Progress
-                value={50}
+                value={devOps}
                 className="bg-gray-300/20 [&>div]:bg-purple-100/80"
               />
             </div>

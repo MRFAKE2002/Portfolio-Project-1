@@ -7,12 +7,12 @@ import { motion } from "motion/react";
 import Image from "next/image";
 
 //! Image
-import profilepic from "../../public/assets/hero/profilepic.png";
+import profilepic from "../../public/assets/Hero/profilepic.png";
 
 function Hero() {
   return (
     <div className="relative overflow-clip min-h-screen text-white bg-[linear-gradient(to_bottom,#000,#340F41_35%,#8A3DA4_55%,#8993ED_85%)]">
-      <div className="absolute bg-black w-[2400px] h-[1000px] rounded-[50%] left-1/2 -translate-x-1/2 bg-[radial-gradient(closest-side,#000_85%,#9E4AC5)] top-[450px] border-[1px] border-[##BD8CDE]/30" />
+      <div className="absolute w-[2400px] h-[1000px] rounded-[50%] left-1/2 -translate-x-1/2 bg-[radial-gradient(closest-side,#000_85%,#9E4AC5)] top-[450px] border-[1px] border-[#BD8CDE]/30" />
       <div className="container relative mx-auto px-4 pb-24">
         <div className="flex flex-col items-center justify-center text-center z-10">
           <motion.div
@@ -44,14 +44,16 @@ function Hero() {
             </p>
             <div className="flex gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.5 }}
-                className="px-6 py-3 bg-gradient-to-r from-purple-800 to-purple-500 rounded-full font-medium hover:bg-purple-700 transition-colors"
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-6 py-3 bg-gradient-to-r from-purple-800 to-purple-500 rounded-full font-medium hover:bg-purple-700 transition-colors cursor-pointer"
               >
                 Contact Me
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.5 }}
-                className="px-6 py-3 border border-purple-400/20 rounded-full font-medium hover:bg-purple-700 transition-colors"
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-6 py-3 border border-purple-400/20 rounded-full font-medium hover:bg-purple-700 transition-colors cursor-pointer"
               >
                 View Work
               </motion.button>
