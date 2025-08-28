@@ -7,16 +7,35 @@ import React, { useState } from "react";
 import project1 from "../../public/assets/About/proj5.png";
 import project2 from "../../public/assets/About/proj6.png";
 import project3 from "../../public/assets/About/proj7.png";
+
+//! Next Image
 import Image from "next/image";
 
 //! Data
 const projects = [
   {
     id: 1,
-    year: 2024,
-    title: "Customer support chatbot",
-    description: "",
+    year: 2023,
+    title: "Doodle - customer support chatbot",
+    description:
+      "We built an advanced customer support chatbot for Doodle. Our chatbot now handles 87% of Doodle's customer support inquiries, freeing up their team to focus on more complex issues.",
     image: project1,
+  },
+  {
+    id: 2,
+    year: 2024,
+    title: "Dash - AI calling system",
+    description:
+      "We developed Dash, an AI-powered calling system that enhances customer communication and support with automated features.",
+    image: project2,
+  },
+  {
+    id: 3,
+    year: 2024,
+    title: "Atomic - AI driven outreach",
+    description:
+      "Atomic is our AI-driven outreach tool that maximizes engagement and conversions through intelligent automation.",
+    image: project3,
   },
 ];
 
