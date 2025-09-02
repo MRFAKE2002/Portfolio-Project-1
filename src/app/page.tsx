@@ -18,8 +18,8 @@ export default function Home() {
       <LogoAnimation />
       <About />
       <Portfolio />
-      <KeyMetrics />
       <Stack />
+      <KeyMetrics />
       <Services />
       <Contact />
       <Footer />
