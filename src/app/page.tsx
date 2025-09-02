@@ -7,6 +7,7 @@ import KeyMetrics from "@/components/KeyMetrics";
 import Stack from "@/components/Stack";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Stack />
       <Services />
       <Contact />
+      <Footer />
     </>
   );
 }
