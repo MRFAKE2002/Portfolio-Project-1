@@ -12,7 +12,6 @@ import {
   SiMongodb,
   SiDocker,
 } from "react-icons/si";
-import { FaLemon } from "react-icons/fa";
 
 //! Framer Motion
 import { motion, useAnimation } from "framer-motion";

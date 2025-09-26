@@ -66,7 +66,7 @@ function About() {
         >
           <h3 className="text-2xl font-bold mb-2">01. Background</h3>
           <p className="text-white/50 mb-8">
-            I'm a passionate full-stack developer with a strong foundation in
+            I am a passionate full-stack developer with a strong foundation in
             computer science and a love for creating innovative web solutions.
             My journey in tech started with a curiosity about how things work,
             which led me to pursue a career in web development.
@@ -111,7 +111,7 @@ function About() {
         >
           <h3 className="text-2xl font-bold mb-2">03. Skills</h3>
           <p className="text-white/50 mb-4">
-            I'm proficient in a wide range of technologies and constantly
+            I am proficient in a wide range of technologies and constantly
             expanding my skill set to stay at the forefront of web development.
           </p>
           <div className="grid text-center gap-4">
@@ -183,9 +183,9 @@ function About() {
             <h3 className="text-2xl font-bold mb-6">05. Goals</h3>
             <p className="text-white/50">
               My goal is to continue growing as a developer, tackling
-              challenging projects, and contributing to the tech community. I'm
+              challenging projects, and contributing to the tech community. I am
               always excited to learn new technologies and push the boundaries
-              of what's possible in web development.
+              of what is possible in web development.
             </p>
           </div>
           {/* Image */}
