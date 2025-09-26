@@ -73,18 +73,13 @@ function About() {
           </p>
           <div className="rounded-lg p-4 mb-4 border border-white/20">
             <code className="text-gray-200/50">
-              const skills = [<br />
-              &nbsp;&nbsp;'JavaScript',
-              <br />
-              &nbsp;&nbsp;'TypeScript'
-              <br />
-              &nbsp;&nbsp;'React',
-              <br />
-              &nbsp;&nbsp;'Next',
-              <br />
-              &nbsp;&nbsp;'Python',
-              <br />
-              ];
+              {`const skills = [
+                'JavaScript',
+                'TypeScript',
+                'React',
+                'Next',
+                'Python',
+              ];`}
             </code>
           </div>
         </motion.div>
