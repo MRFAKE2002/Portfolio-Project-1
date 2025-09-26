@@ -4,9 +4,9 @@
 import React, { useState } from "react";
 
 //! Picture
-import project1 from "../../public/assets/About/proj5.png";
-import project2 from "../../public/assets/About/proj6.png";
-import project3 from "../../public/assets/About/proj7.png";
+import project1 from "../../public/assets/about/proj5.png";
+import project2 from "../../public/assets/about/proj6.png";
+import project3 from "../../public/assets/about/proj7.png";
 
 //! Next Image
 import Image from "next/image";

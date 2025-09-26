@@ -10,8 +10,8 @@ import { motion, Variants } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
 
 //! Picture
-import project1 from "../../public/assets/About/proj5.png";
-import project2 from "../../public/assets/About/proj6.png";
+import project1 from "../../public/assets/about/proj5.png";
+import project2 from "../../public/assets/about/proj6.png";
 
 //! Next Image
 import Image from "next/image";
